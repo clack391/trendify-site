@@ -1,0 +1,99 @@
+/* Trendify's site: the app's colours (cream and near-black, one terracotta accent) and its serif
+   headlines, in light and dark. No web fonts, so the pages load nothing from anywhere else. */
+:root {
+  --bg: #F8F5EF;
+  --surface: #FFFDF9;
+  --ink: #1E1A16;
+  --body: #2E2924;
+  --ink2: #5E574E;
+  --line: #E4DCCF;
+  --img: #E9E1D4;
+  --accent: #A3472D;
+  --accent-text: #A3472D;
+  --on-accent: #FFFDF9;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171411;
+    --surface: #221E1A;
+    --ink: #F3EDE3;
+    --body: #E6DFD4;
+    --ink2: #B9AFA2;
+    --line: #3A332C;
+    --img: #2C2621;
+    --accent: #D9A898;
+    --accent-text: #E2B9AC;
+    --on-accent: #171411;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--body);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+
+a { color: var(--accent-text); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; border-radius: 4px; }
+
+header.top { padding: 22px 0; border-bottom: 1px solid var(--line); }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 20px; }
+.mark { width: 32px; height: 32px; border-radius: 8px; background: var(--accent); display: inline-flex; align-items: center; justify-content: center; }
+.mark svg { width: 18px; height: 18px; }
+
+nav a { font-size: 15px; font-weight: 600; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+
+h1, h2 { font-family: var(--serif); font-weight: 500; color: var(--ink); letter-spacing: -0.01em; }
+h1 { font-size: clamp(34px, 7vw, 48px); line-height: 1.1; margin: 0 0 16px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 48px 0 12px; }
+h3 { font-size: 17px; color: var(--ink); margin: 24px 0 6px; }
+p { margin: 0 0 14px; }
+ul { margin: 0 0 14px; padding-left: 22px; }
+li { margin-bottom: 8px; }
+
+.lead { font-size: 19px; color: var(--ink2); max-width: 34em; }
+.muted { color: var(--ink2); }
+
+.hero { padding: 40px 0 8px; text-align: center; }
+.hero .lead { margin: 0 auto 8px; }
+
+.arches { display: flex; justify-content: center; align-items: flex-end; gap: 10px; margin: 0 0 32px; }
+.arches img {
+  display: block;
+  object-fit: cover;
+  background: var(--img);
+  border-radius: 999px 999px 16px 16px;
+  width: min(28%, 150px);
+  aspect-ratio: 100 / 164;
+}
+.arches img.tall { width: min(32%, 174px); aspect-ratio: 116 / 200; }
+
+.cards { display: grid; gap: 14px; margin-top: 8px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 20px; }
+.card h3 { margin-top: 0; }
+.card p:last-child { margin-bottom: 0; }
+
+.note { border-left: 3px solid var(--accent); padding: 4px 0 4px 16px; margin: 20px 0; }
+
+.policy h2 { font-size: 23px; margin-top: 40px; }
+.policy .updated { color: var(--ink2); }
+
+footer { margin-top: 64px; padding: 28px 0 40px; border-top: 1px solid var(--line); font-size: 15px; color: var(--ink2); }
+footer p { margin-bottom: 8px; }
