@@ -23,14 +23,14 @@
 
   <main class="wrap policy">
     <h1 style="margin-top:40px">Privacy policy</h1>
-    <p class="updated">Last updated 7 October 2026</p>
+    <p class="updated">Last updated 8 October 2026</p>
     <p class="lead">This policy covers the Trendify mobile app: what it collects, why, who helps run it, and how you delete it. Questions go to <a href="mailto:clack1477@gmail.com">clack1477@gmail.com</a>.</p>
 
     <h2>What Trendify collects</h2>
     <h3>Your account</h3>
     <p>Your email address. If you sign in with Google, also the name and profile picture link Google shares with the sign-in. The settings you choose: language, countries, niches, keywords to watch and alerts.</p>
     <h3>Your stories</h3>
-    <p>Every story you make in the app: ideas, outlines, characters, styles, scenes and upload text, and the spoken summary of a story when you ask for one (Hear your story).</p>
+    <p>Every story you make in the app: ideas, outlines, characters, styles, scenes and upload text, the spoken summary of a story when you ask for one (Hear your story), and its voiceover when you make one (the narration read aloud; removed 30 days after it was made).</p>
     <h3>Your videos</h3>
     <p>The YouTube links you add to My videos, with their public numbers (views, likes and comments) and the reviews Trendify writes about them.</p>
     <h3>Your YouTube channel, only if you connect it</h3>
@@ -54,8 +54,8 @@
     <ul>
       <li><strong>Supabase</strong> stores the app’s data and runs its server functions and sign-in, on servers in London (UK).</li>
       <li><strong>Anthropic (Claude)</strong> writes the story ideas, outlines, scenes and upload text from your story, and the video reviews and channel findings from your videos’ numbers and analytics.</li>
-      <li><strong>Google</strong>: the YouTube Data API and YouTube Analytics API (to read the data above), the Gemini API (to describe the story, style and pacing of public YouTube videos, including your own public uploads, and, only when you tap Hear your story, to write a short summary of that story from its outline and read it aloud; this uses Gemini’s free tier, under which Google may use what it receives to improve its products), and Firebase Cloud Messaging (to deliver alerts to Android phones).</li>
-      <li><strong>OpenAI</strong> reads the short summary of a story aloud when you tap Hear your story and Google’s free voices cannot read it that day. It receives only that summary.</li>
+      <li><strong>Google</strong>: the YouTube Data API and YouTube Analytics API (to read the data above), the Gemini API (to describe the story, style and pacing of public YouTube videos, including your own public uploads, and, only when you tap Hear your story, to write a short summary of that story from its outline and read it aloud, or when you tap Make the voiceover, to pick a narrator’s voice from the story’s idea, its narrator and a few narration lines; this uses Gemini’s free tier, under which Google may use what it receives to improve its products), and Firebase Cloud Messaging (to deliver alerts to Android phones).</li>
+      <li><strong>OpenAI</strong> reads the short summary of a story aloud when you tap Hear your story and Google’s free voices cannot read it that day, and reads a story’s narration aloud, line by line, when you tap Make the voiceover. It receives only that summary, or those narration lines.</li>
       <li><strong>Expo</strong> delivers push notifications and app updates to your phone.</li>
       <li><strong>Sentry</strong> receives crash reports, stored in the EU.</li>
     </ul>
